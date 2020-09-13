@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PictureIdea</string>
+    <string name="saved_idea_name">保存済みのアイデア</string>
+    <string name="app_main_name">Picture Idea</string>
+    <string name="specified_keyword">キーワードを指定</string>
+    <string name="next_picture">次へ</string>
+    <string name="previous_picture">前へ</string>
+    <string name="save_picture">保存</string>
+    <string name="add_picture">写真を増やす</string>
+    <string name="decrement_picture">写真を減らす</string>
+    <string name="fix_picture">写真を固定する</string>
+    <string name="include_picture">この写真を含める</string>
+    <string name="title">タイトル</string>
+    <string name="detail">詳細</string>
+    <string name="update">変更を保存</string>
+    <string name="delete">削除</string>
+</resources>
