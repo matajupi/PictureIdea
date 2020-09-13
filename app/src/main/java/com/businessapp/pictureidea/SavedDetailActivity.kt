@@ -10,7 +10,7 @@ class SavedDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_saved_detail)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        setTitle("(仮)Title")
+        title = "(仮)Title"
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

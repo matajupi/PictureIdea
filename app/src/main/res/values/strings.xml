@@ -14,4 +14,5 @@
     <string name="detail">詳細</string>
     <string name="update">変更を保存</string>
     <string name="delete">削除</string>
+    <string name="imageString">Image</string>
 </resources>

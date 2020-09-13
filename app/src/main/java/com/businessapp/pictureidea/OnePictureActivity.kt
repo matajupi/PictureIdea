@@ -15,25 +15,21 @@ class OnePictureActivity : AppCompatActivity() {
 
         setTitle(R.string.app_main_name)
 
-        var addButton: Button = findViewById(R.id.button)
+        val addButton: Button = findViewById(R.id.button)
         addButton.setOnClickListener(addAction)
 
-        var saveButton: Button = findViewById(R.id.button1)
+        val saveButton: Button = findViewById(R.id.button1)
         saveButton.setOnClickListener(saveAction)
     }
 
-    val addAction = object:View.OnClickListener {
-        override fun onClick(v: View?) {
-            var intent = Intent(application, TwoPictureActivity::class.java)
-            startActivity(intent)
-        }
+    private val addAction = View.OnClickListener {
+        val intent = Intent(application, TwoPictureActivity::class.java)
+        startActivity(intent)
     }
 
-    val saveAction = object:View.OnClickListener {
-        override fun onClick(v: View?) {
-            var intent = Intent(application, SaveActivity::class.java)
-            startActivity(intent)
-        }
+    private val saveAction = View.OnClickListener {
+        val intent = Intent(application, SaveActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -44,7 +40,7 @@ class OnePictureActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.savedItemButton -> {
-                var intent: Intent = Intent(application, SavedListActivity::class.java)
+                val intent = Intent(application, SavedListActivity::class.java)
                 startActivity(intent)
             }
         }

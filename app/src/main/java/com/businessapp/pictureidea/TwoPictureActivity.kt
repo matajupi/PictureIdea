@@ -15,24 +15,18 @@ class TwoPictureActivity : AppCompatActivity() {
 
         setTitle(R.string.app_main_name)
 
-        var decrementButton: Button = findViewById(R.id.button4)
+        val decrementButton: Button = findViewById(R.id.button4)
         decrementButton.setOnClickListener(decrementAction)
 
-        var saveButton: Button = findViewById(R.id.button5)
+        val saveButton: Button = findViewById(R.id.button5)
         saveButton.setOnClickListener(saveAction)
     }
 
-    val decrementAction = object:View.OnClickListener {
-        override fun onClick(v: View?) {
-            finish()
-        }
-    }
+    private val decrementAction = View.OnClickListener { finish() }
 
-    val saveAction = object:View.OnClickListener {
-        override fun onClick(v: View?) {
-            var intent: Intent = Intent(application, SaveActivity::class.java)
-            startActivity(intent)
-        }
+    private val saveAction = View.OnClickListener {
+        val intent = Intent(application, SaveActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -43,7 +37,7 @@ class TwoPictureActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.savedItemButton -> {
-                var intent: Intent = Intent(application, SavedListActivity::class.java)
+                val intent = Intent(application, SavedListActivity::class.java)
                 startActivity(intent)
             }
         }
