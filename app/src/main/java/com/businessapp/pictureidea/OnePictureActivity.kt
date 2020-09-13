@@ -17,11 +17,21 @@ class OnePictureActivity : AppCompatActivity() {
 
         var addButton: Button = findViewById(R.id.button)
         addButton.setOnClickListener(addAction)
+
+        var saveButton: Button = findViewById(R.id.button1)
+        saveButton.setOnClickListener(saveAction)
     }
 
     val addAction = object:View.OnClickListener {
         override fun onClick(v: View?) {
-            var intent: Intent = Intent(application, TwoPictureActivity::class.java)
+            var intent = Intent(application, TwoPictureActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    val saveAction = object:View.OnClickListener {
+        override fun onClick(v: View?) {
+            var intent = Intent(application, SaveActivity::class.java)
             startActivity(intent)
         }
     }

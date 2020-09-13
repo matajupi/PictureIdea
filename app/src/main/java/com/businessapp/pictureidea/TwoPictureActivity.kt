@@ -17,11 +17,21 @@ class TwoPictureActivity : AppCompatActivity() {
 
         var decrementButton: Button = findViewById(R.id.button4)
         decrementButton.setOnClickListener(decrementAction)
+
+        var saveButton: Button = findViewById(R.id.button5)
+        saveButton.setOnClickListener(saveAction)
     }
 
     val decrementAction = object:View.OnClickListener {
         override fun onClick(v: View?) {
             finish()
+        }
+    }
+
+    val saveAction = object:View.OnClickListener {
+        override fun onClick(v: View?) {
+            var intent: Intent = Intent(application, SaveActivity::class.java)
+            startActivity(intent)
         }
     }
 
